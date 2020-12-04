@@ -7,7 +7,7 @@
 # Recommended, but not necessary:
 * my build of dmenu (https://github.com/joeldba/dmenu-dba)
 * st
-* slstatus
+* my build of slstatus (https://github.com/joeldba/slstatus-dba)
 * picom
 
 # Patches applied:
