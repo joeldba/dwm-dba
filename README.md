@@ -5,9 +5,7 @@
 * ttf-droid
 
 # Recommended, but not necessary:
-* my build of dmenu (https://github.com/joeldba/dmenu-dba)
-* st
-* my build of slstatus (https://github.com/joeldba/slstatus-dba)
+* my builds of dmenu, st, and slstatus, which can be found on my github page
 * picom
 
 # Patches applied:
