@@ -5,7 +5,7 @@
 * ttf-droid
 
 # Recommended, but not necessary:
-* dmenu
+* my build of dmenu (https://github.com/joeldba/dmenu-dba)
 * st
 * slstatus
 * picom
