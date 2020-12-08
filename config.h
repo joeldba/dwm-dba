@@ -13,11 +13,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "droidsans:size=10" };
 static const char dmenufont[]       = "droidsans:size=10";
-static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#3b4252";
-static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#eceff4";
-static const char col_cyan[]        = "#434c5e";
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#3c3836";
+static const char col_gray3[]       = "#bdae93";
+static const char col_gray4[]       = "#fbf1c7";
+static const char col_cyan[]        = "#504945";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },

@@ -10,14 +10,14 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh	    = 26;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
+static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "droidsans:size=10" };
 static const char dmenufont[]       = "droidsans:size=10";
-static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#3b4252";
-static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#eceff4";
-static const char col_cyan[]        = "#434c5e";
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#3c3836";
+static const char col_gray3[]       = "#bdae93";
+static const char col_gray4[]       = "#fbf1c7";
+static const char col_cyan[]        = "#504945";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -62,7 +62,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", "launch:", "-h", "26", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-p", "launch:", "-h", "24", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *compcmd[] = { "picom", NULL };
 static const char *coffcmd[] = { "pkill", "picom", NULL };
