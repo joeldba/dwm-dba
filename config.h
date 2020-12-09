@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -11,8 +11,8 @@ static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
-static const char *fonts[]          = { "terminus:size=8" };
-static const char dmenufont[]       = "terminus:size=8";
+static const char *fonts[]          = { "droidsans:size=10" };
+static const char dmenufont[]       = "droidsans:size=10";
 static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#3c3836";
 static const char col_gray3[]       = "#bdae93";
