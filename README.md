@@ -6,7 +6,6 @@
 
 # Recommended, but not necessary:
 * my builds of dmenu, st, and slstatus, which can be found on my github page
-* picom
 * gtk-theme-arc-gruvbox-git (AUR)
 
 # Patches applied:
