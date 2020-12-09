@@ -2,7 +2,7 @@
 * libx11
 * libxft
 * libxinerama
-* ttf-droid
+* terminus-font-otb
 
 # Recommended, but not necessary:
 * my builds of dmenu, st, and slstatus, which can be found on my github page
