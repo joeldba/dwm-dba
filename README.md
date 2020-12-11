@@ -19,3 +19,4 @@
 * pertag - allows you to set layouts per tag (hence the name)
 * activetagindicatorbar - uses a bar instead of a small square to indicate tag focus
 * restartsig - allows the user to restart dwm without having to restart X (bound to Mod + Shift + R)
+* cyclelayouts - allows easy cycling between layouts using Mod+Ctrl+, and Mod+Control+.
