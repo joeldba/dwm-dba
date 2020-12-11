@@ -15,3 +15,4 @@
 * bar-height - allows you to adjust bar thiccness (set to 26px by default)
 * center - centers windows in floating mode
 * fibonacci/dwindle + centeredmaster layouts
+* pertag - allows you to set layouts per tag (hence the name)
