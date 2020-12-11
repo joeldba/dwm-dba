@@ -13,7 +13,7 @@
 * systray - adds a systemtray (disabled by default)
 * fancybar - shows all clients on the bar instead of a single, focused client
 * bar-height - allows you to adjust bar thiccness (set to 26px by default)
-* center - centers windows in floating mode
+* center - centers new windows whilst in the floating layout
 * fibonacci + dwindle layouts
 * centeredmaster layout
 * pertag - allows you to set layouts per tag (hence the name)
