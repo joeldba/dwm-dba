@@ -14,3 +14,4 @@
 * fancybar - shows more than one window on the bar
 * bar-height - allows to adjust bar thiccness
 * center - centers windows in floating mode
+* fibonacci + centeredmaster layouts
