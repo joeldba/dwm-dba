@@ -18,4 +18,4 @@
 * centeredmaster layout
 * pertag - allows you to set layouts per tag (hence the name)
 * activetagindicatorbar - uses a bar instead of a small square to indicate tag focus
-* restartsig - allows the user to restart dwm without having to restart X
+* restartsig - allows the user to restart dwm without having to restart X (bound to Mod + Ctrl + Shift + Q)
