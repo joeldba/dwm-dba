@@ -11,8 +11,11 @@
 # Patches applied:
 * fullgaps - places gaps between windows
 * systray - adds a systemtray (disabled by default)
-* fancybar - shows all clients on the bar instead of a single, active client
+* fancybar - shows all clients on the bar instead of a single, focused client
 * bar-height - allows you to adjust bar thiccness (set to 26px by default)
 * center - centers windows in floating mode
-* fibonacci/dwindle + centeredmaster layouts
+* fibonacci + dwindle layouts
+* centeredmaster layout
 * pertag - allows you to set layouts per tag (hence the name)
+* activetagindicatorbar - uses a bar instead of a small square to indicate tag focus
+* restartsig - allows the user to restart dwm without having to restart X
