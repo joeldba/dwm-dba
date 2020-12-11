@@ -14,4 +14,4 @@
 * fancybar - shows all clients on the bar instead of the single, active client
 * bar-height - allows you to adjust bar thiccness (set to 26px by default)
 * center - centers windows in floating mode
-* fibonacci + centeredmaster layouts
+* fibonacci/dwindle + centeredmaster layouts
