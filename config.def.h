@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -9,19 +9,26 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
-static const int user_bh	    = 26;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
-static const char *fonts[]          = { "terminus:size=8" };
-static const char dmenufont[]       = "terminus:size=8";
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#3c3836";
-static const char col_gray3[]       = "#bdae93";
-static const char col_gray4[]       = "#fbf1c7";
-static const char col_cyan[]        = "#504945";
+static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
+static const char *fonts[]          = { "hack:size=8" };
+static const char dmenufont[]       = "hack:size=8";
+static const char col_gray1[]       = "#2e3440";
+static const char col_gray2[]       = "#434c5e";
+static const char col_gray3[]       = "#88c0d0";
+static const char col_gray4[]       = "#eceff4";
+static const char col_cyan[]        = "#4c566a";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
+static const unsigned int alphas[][3]      = {
+       /*               fg      bg        border     */
+       [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+       [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -70,6 +77,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-i", "-c", "-l", "15", "-p", "run:", "-h", "26", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *compon[] = { "picom", NULL};
+static const char *compoff[] = { "pkill", "picom", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -116,6 +125,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask, 		XK_r,      quit,           {1} }, 
+	{ MODKEY,			XK_e,	   spawn,	   {.v = compon } },
+	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 };
 
 /* button definitions */
