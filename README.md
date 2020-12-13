@@ -2,7 +2,7 @@
 * libx11
 * libxft
 * libxinerama
-* terminus-font-otb
+* ttf-hack
 
 # Recommended, but not necessary:
 * my builds of dmenu, st, and slstatus, which can be found on my github page
@@ -20,3 +20,4 @@
 * activetagindicatorbar - uses a bar instead of a small square to indicate tag focus
 * restartsig - allows the user to restart dwm without having to restart X (bound to Mod + Shift + R)
 * cyclelayouts - easy cycling between layouts using Mod+Ctrl+, and Mod+Control+.
+* alpha - translucent top panel when used w/ a compositor (i.e picom)
