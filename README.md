@@ -14,7 +14,7 @@
 * ~~systray - adds a systemtray~~ CURRENTLY DISABLED, X will crash if the systray is enabled! might have something to do w/ the alpha patch, don't know of a fix.
 * fancybar - shows all focused and unfocused clients on the bar
 * bar-height - allows you to adjust bar thiccness (set to 24px by default)
-* center - centers windows in floating mode
+* center - centers new windows in floating mode
 * fibonacci & dwindle layouts
 * centeredmaster & centeredfloatingmaster layouts
 * pertag - set layouts per tag (hence the name)
