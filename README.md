@@ -11,7 +11,7 @@
 
 # Patches applied:
 * fullgaps - places gaps between windows
-~~systray - adds a systemtray~~ DO NOT ENABLE, X will crash if you do! might have something to do w/ the alpha patch, don't know of a fix.
+* ~~systray - adds a systemtray~~ DO NOT ENABLE, X will crash if you do! might have something to do w/ the alpha patch, don't know of a fix.
 * fancybar - shows all focused and unfocused clients on the bar
 * bar-height - allows you to adjust bar thiccness (set to 24px by default)
 * center - centers windows in floating mode
