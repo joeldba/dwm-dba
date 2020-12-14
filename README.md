@@ -2,18 +2,20 @@
 * libx11
 * libxft
 * libxinerama
-* terminus-font-otb
+* hack-ttf
 
 # Recommended, but not necessary:
 * my builds of dmenu, st, and slstatus, which can be found on my github page
-* gtk-theme-arc-gruvbox-git (AUR)
+* picom
+* arc-gtk-theme
 
 # Patches applied:
 * fullgaps - places gaps between windows
-* systray - adds a systemtray (currently disabled by default bc X will crash if it's enabled- don't know of a fix)
-* fancybar - shows all clients on the bar instead of a single, active client
-* bar-height - allows you to adjust bar thiccness (set to 26px by default)
+~~systray - adds a systemtray~~ DO NOT ENABLE, X will crash if you do! might have something to do w/ the alpha patch, don't know of a fix.
+* fancybar - shows all focused and unfocused clients on the bar
+* bar-height - allows you to adjust bar thiccness (set to 24px by default)
 * center - centers windows in floating mode
-* fibonacci/dwindle + centeredmaster layouts
-* pertag - allows you to set layouts per tag (hence the name)
-* alpha - top bar is translucent if a compositor is used
+* fibonacci & dwindle layouts
+* centeredmaster & centeredfloatingmaster layouts
+* pertag - set layouts per tag (hence the name)
+* alpha - makes the bar translucent when dwm is used alongside a compositor
