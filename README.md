@@ -6,7 +6,7 @@
 
 # Recommended, but not necessary:
 * my builds of dmenu, st, and slstatus, which can be found on my github page
-* picom
+* picom-tryone-git (AUR)
 * arc-gtk-theme
 
 # Patches applied:
