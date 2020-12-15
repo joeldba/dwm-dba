@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 15;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -14,11 +14,11 @@ static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = u
 static const char *fonts[]          = { "hack:size=8" };
 static const char dmenufont[]       = "hack:size=8";
 static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#434c5e";
-static const char col_gray3[]       = "#88c0d0";
+static const char col_gray2[]       = "#3b4252";
+static const char col_gray3[]       = "#d8dee9";
 static const char col_gray4[]       = "#eceff4";
-static const char col_cyan[]        = "#4c566a";
-static const unsigned int baralpha = 0xd0;
+static const char col_cyan[]        = "#434c5e";
+static const unsigned int baralpha = 0xcc;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -77,8 +77,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-i", "-c", "-l", "15", "-p", "run:", "-h", "26", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *compon[] = { "picom", NULL};
+static const char *compon[] = { "picom", "--experimental-backends", NULL };
 static const char *compoff[] = { "pkill", "picom", NULL };
+static const char *volup[] = { "pulsemixer", "--change-volume", "+10", NULL };
+static const char *voldown[] = { "pulsemixer", "--change-volume", "-10", NULL };
+static const char *volmute[] = { "pulsemixer", "--toggle-mute", NULL };
+
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -127,6 +131,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, 		XK_r,      quit,           {1} }, 
 	{ MODKEY,			XK_e,	   spawn,	   {.v = compon } },
 	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
+	{ MODKEY,			XK_F3,	   spawn,	   {.v = volup } },
+	{ MODKEY,			XK_F2,	   spawn,	   {.v = voldown } },
+	{ MODKEY,			XK_F4,	   spawn, 	   {.v = volmute } },
 };
 
 /* button definitions */
