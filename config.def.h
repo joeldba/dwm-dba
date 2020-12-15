@@ -13,17 +13,17 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "hack:size=8" };
 static const char dmenufont[]       = "hack:size=8";
-static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#3b4252";
-static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#eceff4";
-static const char col_cyan[]        = "#434c5e";
+static const char col1[]       = "#2e3440";
+static const char col2[]       = "#3b4252";
+static const char col3[]       = "#d8dee9";
+static const char col4[]       = "#eceff4";
+static const char col5[]        = "#434c5e";
 static const unsigned int baralpha = 0xcc;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	/*               fg    bg    border   */
+	[SchemeNorm] = { col3, col1, col2 },
+	[SchemeSel]  = { col4, col5, col5 },
 };
 static const unsigned int alphas[][3]      = {
        /*               fg      bg        border     */
@@ -82,7 +82,6 @@ static const char *compoff[] = { "pkill", "picom", NULL };
 static const char *volup[] = { "pulsemixer", "--change-volume", "+10", NULL };
 static const char *voldown[] = { "pulsemixer", "--change-volume", "-10", NULL };
 static const char *volmute[] = { "pulsemixer", "--toggle-mute", NULL };
-
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
