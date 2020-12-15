@@ -8,6 +8,7 @@
 * my builds of dmenu, st, and slstatus, which can be found on my github page
 * picom-tryone-git (AUR)
 * arc-gtk-theme
+* pulsemixer (for volume controls)
 
 # Patches applied:
 * fullgaps - places gaps between windows
