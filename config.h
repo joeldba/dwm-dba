@@ -12,7 +12,6 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "hack:size=8" };
-static const char dmenufont[]       = "hack:size=8";
 static const char col1[]       = "#2e3440";
 static const char col2[]       = "#3b4252";
 static const char col3[]       = "#d8dee9";
