@@ -18,5 +18,6 @@
 * center - centers new windows in floating mode
 * fibonacci & dwindle layouts
 * centeredmaster & centeredfloatingmaster layouts
+* gaplessgrid layout
 * pertag - set layouts per tag (hence the name)
 * alpha - makes the bar translucent when dwm is used alongside a compositor
