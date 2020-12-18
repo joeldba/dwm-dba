@@ -11,12 +11,12 @@ static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
-static const char *fonts[]          = { "hack:size=8" };
+static const char *fonts[]          = { "dejavusans:size=8" };
 static const char col1[]       = "#1d1f21";
 static const char col2[]       = "#282a2e";
 static const char col3[]       = "#8abeb7";
 static const char col4[]       = "#c5c8c6";
-static const char col5[]       = "#373b41";
+static const char col5[]       = "#a54242";
 static const char col6[]       = "#707880";
 static const unsigned int baralpha = 0xcc;
 static const unsigned int borderalpha = OPAQUE;
