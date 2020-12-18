@@ -21,3 +21,4 @@
 * gaplessgrid layout
 * pertag - set layouts per tag (hence the name)
 * alpha - makes the bar translucent when dwm is used alongside a compositor
+* actualfullscreen - Mod+Shift+F toggles fullscreen mode
