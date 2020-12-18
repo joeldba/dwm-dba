@@ -136,6 +136,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F3,	   spawn,	   {.v = volup } },
 	{ MODKEY,			XK_F2,	   spawn,	   {.v = voldown } },
 	{ MODKEY,			XK_F4,	   spawn, 	   {.v = volmute } },
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 };
 
 /* button definitions */
