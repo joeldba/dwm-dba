@@ -12,12 +12,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "hack:size=8" };
-static const char col1[]       = "#2e3440";
-static const char col2[]       = "#3b4252";
-static const char col3[]       = "#d8dee9";
-static const char col4[]       = "#eceff4";
-static const char col5[]       = "#434c5e";
-static const char col6[]       = "#88c0d0";
+static const char col1[]       = "#1d1f21";
+static const char col2[]       = "#282a2e";
+static const char col3[]       = "#8abeb7";
+static const char col4[]       = "#c5c8c6";
+static const char col5[]       = "#373b41";
+static const char col6[]       = "#707880";
 static const unsigned int baralpha = 0xcc;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
