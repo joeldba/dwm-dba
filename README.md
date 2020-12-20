@@ -3,12 +3,15 @@
 * libxft
 * libxinerama
 * ttf-dejavu
+* ttf-font-awesome
+* dmenu
+* st
+* pulsemixer (for volume controls)
 
 # Recommended, but not necessary:
-* my builds of dmenu, st, and slstatus, which can be found on my github page
+* my custom builds of dmenu, st, and slstatus, which can be found on my github page
 * picom-tryone-git (AUR)
-* arc-gtk-theme
-* pulsemixer (for volume controls)
+* adapta-gtk-theme
 
 # Patches applied:
 * fullgaps - places gaps between windows
@@ -21,4 +24,4 @@
 * gaplessgrid layout
 * pertag - set layouts per tag (hence the name)
 * alpha - makes the bar translucent when dwm is used alongside a compositor
-* actualfullscreen - Mod+Shift+F toggles fullscreen mode
+* actualfullscreen - Mod+Shift+F toggles fullscreen mode for the focused window
