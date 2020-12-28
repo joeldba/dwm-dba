@@ -15,9 +15,9 @@ static const char *fonts[]          = { "dejavusans:size=8", "fontawesome:size=8
 static const char col1[]       = "#1d1f21";
 static const char col2[]       = "#282a2e";
 static const char col3[]       = "#8abeb7";
-static const char col4[]       = "#c5c8c6";
+static const char col4[]       = "#8abeb7";
 static const char col5[]       = "#a54242";
-static const char col6[]       = "#707880";
+static const char col6[]       = "#8abeb7";
 static const unsigned int baralpha = 0xcc;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
@@ -32,7 +32,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "web", "chat", "term", "game", "vbox", "etc" };
+static const char *tags[] = { "web", "chat", "term", "game", "gfx", "vbox", "etc" };
 
 static const Rule rules[] = {
 	/* xprop(1):
