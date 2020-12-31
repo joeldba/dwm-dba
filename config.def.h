@@ -10,7 +10,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh	    = 26;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
+static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "dejavusans:size=8", "fontawesome:size=8" };
 static const char col1[]       = "#1d1f21";
 static const char col2[]       = "#282a2e";
