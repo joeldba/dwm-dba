@@ -11,15 +11,15 @@ static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
-static const char *fonts[]          = { "dejavusans:size=8", "fontawesome:size=8" };
-static const char col1[]       = "#1d1f21";
-static const char col2[]       = "#282a2e";
-static const char col3[]       = "#8abeb7";
-static const char col4[]       = "#8abeb7";
-static const char col5[]       = "#a54242";
-static const char col6[]       = "#8abeb7";
-static const unsigned int baralpha = 0xcc;
-static const unsigned int borderalpha = OPAQUE;
+static const char *fonts[]          = { "dejavusans:size=8", "fontawesome:size=8" }; 
+static const char col1[]       = "#1d1f21"; 	/* bar background */
+static const char col2[]       = "#282a2e"; 	/* unfocused window */
+static const char col3[]       = "#8abeb7"; 	/* bar foreground */
+static const char col4[]       = "#8abeb7"; 	/* bar foreground highlight */
+static const char col5[]       = "#a54242"; 	/* bar accent color */
+static const char col6[]       = "#8abeb7"; 	/* focused window */
+static const unsigned int baralpha = 0xcc; 	/* translucency of bar */
+static const unsigned int borderalpha = OPAQUE;		/* translucency of window borders */
 static const char *colors[][3]      = {
 	/*               fg    bg    border   */
 	[SchemeNorm] = { col3, col1, col2 },
@@ -32,7 +32,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "web", "chat", "term", "game", "gfx", "vbox", "etc" };
+static const char *tags[] = { "web", "chat", "term", "game", "gfx", "vbox", "etc" };	/* tag names */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -40,7 +40,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
