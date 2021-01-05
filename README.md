@@ -7,7 +7,8 @@
 * dmenu
 * st
 * pulsemixer (for volume controls)
-* the first three packages will need '-dev' appended to them if you're on an apt-based distro.
+
+the first three packages will need '-dev' appended to them if you're on an apt-based distro.
 
 # Recommended, but not necessary:
 * my custom builds of dmenu, st, and slstatus, which can be found on my github page
