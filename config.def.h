@@ -15,7 +15,7 @@ static const char *fonts[]          = { "dejavusans:size=8", "fontawesome:size=8
 static const char col1[]       = "#1d1f21"; 	/* bar background */
 static const char col2[]       = "#282a2e"; 	/* unfocused window */
 static const char col3[]       = "#8abeb7"; 	/* bar foreground */
-static const char col4[]       = "#8abeb7"; 	/* bar foreground highlight */
+static const char col4[]       = "#EEEEEE"; 	/* bar foreground highlight */
 static const char col5[]       = "#a54242"; 	/* bar accent color */
 static const char col6[]       = "#8abeb7"; 	/* focused window */
 static const unsigned int baralpha = 0xcc; 	/* translucency of bar */
@@ -40,7 +40,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0 },
 };
 
 /* layout(s) */
@@ -96,7 +96,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
      	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
