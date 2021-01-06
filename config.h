@@ -32,7 +32,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "web", "chat", "term", "game", "gfx", "vbox", "etc" };	/* tag names */
+static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  " };	/* tag names */
 
 static const Rule rules[] = {
 	/* xprop(1):
