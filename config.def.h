@@ -11,7 +11,7 @@ static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
-static const char *fonts[]          = { "dejavusans:size=8", "fontawesome:size=8" }; 
+static const char *fonts[]          = { "DejaVu Sans:size=8", "fontawesome:size=8" }; 
 static const char col1[]       = "#1d1f21"; 	/* bar background */
 static const char col2[]       = "#282a2e"; 	/* unfocused window */
 static const char col3[]       = "#8abeb7"; 	/* bar foreground */
@@ -32,7 +32,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  " };	/* tag names */
+static const char *tags[] = { "  " , "  ", "  ", "  ", "  ", "  ", "  " };	/* tag names */
 
 static const Rule rules[] = {
 	/* xprop(1):
