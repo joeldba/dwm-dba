@@ -4,6 +4,7 @@
 * libxinerama
 * ttf-dejavu
 * ttf-font-awesome
+* freetype2
 * dmenu
 * st
 * pulsemixer (for volume controls)
