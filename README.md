@@ -2,7 +2,7 @@
 * libx11
 * libxft
 * libxinerama
-* ttf-dejavu
+* terminus-font
 * ttf-font-awesome
 * freetype2
 * dmenu
