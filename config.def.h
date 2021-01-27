@@ -9,16 +9,16 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
-static const char *fonts[]          = { "DejaVu Sans:size=8", "fontawesome:size=8" }; 
-static const char col1[]       = "#1d1f21"; 	/* bar background */
-static const char col2[]       = "#282a2e"; 	/* unfocused window */
-static const char col3[]       = "#8abeb7"; 	/* bar foreground */
-static const char col4[]       = "#EEEEEE"; 	/* bar foreground highlight */
-static const char col5[]       = "#a54242"; 	/* bar accent color */
-static const char col6[]       = "#8abeb7"; 	/* focused window */
-static const unsigned int baralpha = 0xcc; 	/* translucency of bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
+static const int user_bh	    = 26;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
+static const char *fonts[]          = { "Terminus:size=8", "fontawesome:size=8" }; 
+static const char col1[]       = "#282828"; 	/* bar background */
+static const char col2[]       = "#282828"; 	/* unfocused window */
+static const char col3[]       = "#ebdbb2"; 	/* bar foreground */
+static const char col4[]       = "#fbf1c7"; 	/* bar foreground highlight */
+static const char col5[]       = "#3c3836"; 	/* bar accent color */
+static const char col6[]       = "#ebdbb2"; 	/* focused window */
+static const unsigned int baralpha = 0xdd; 	/* translucency of bar */
 static const unsigned int borderalpha = OPAQUE;		/* translucency of window borders */
 static const char *colors[][3]      = {
 	/*               fg    bg    border   */
