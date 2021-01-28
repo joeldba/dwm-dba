@@ -14,7 +14,7 @@ the first three packages will need '-dev' appended to them if you're on an apt-b
 
 # Recommended, but not necessary:
 * my custom builds of dmenu, st, and slstatus, which can be found on my github page
-* picom-tryone-git (AUR)
+* picom
 * adapta-gtk-theme
 
 # Patches applied:
