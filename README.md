@@ -8,6 +8,7 @@
 * dmenu
 * st
 * pulsemixer (for volume controls)
+* slock (for display locking)
 
 the first three packages will need '-dev' appended to them if you're on an apt-based distro.
 
