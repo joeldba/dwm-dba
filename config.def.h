@@ -143,7 +143,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F4,	   spawn, 	   {.v = volmute } },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = lockcmd } },
-	{ MODKEY,			XK_e,	   spawn,	   {.v = filecmd } },
+	{ MODKEY,			XK_r,	   spawn,	   {.v = filecmd } },
 	{ MODKEY,			XK_v,	   spawn,	   {.v = vimcmd } },
 	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = cmuscmd } },
 };
