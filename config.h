@@ -86,6 +86,9 @@ static const char *volup[] = { "pulsemixer", "--change-volume", "+10", NULL };
 static const char *voldown[] = { "pulsemixer", "--change-volume", "-10", NULL };
 static const char *volmute[] = { "pulsemixer", "--toggle-mute", NULL };
 static const char *lockcmd[] = { "slock", NULL };
+static const char *filecmd[] = { "st", "-e", "ranger", NULL };
+static const char *vimcmd[] = { "st", "-e", "vim", NULL };
+static const char *cmuscmd[] = { "st", "-e", "cmus", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -140,6 +143,9 @@ static Key keys[] = {
 	{ MODKEY,			XK_F4,	   spawn, 	   {.v = volmute } },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = lockcmd } },
+	{ MODKEY,			XK_e,	   spawn,	   {.v = filecmd } },
+	{ MODKEY,			XK_v,	   spawn,	   {.v = vimcmd } },
+	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = cmuscmd } },
 };
 
 /* button definitions */
