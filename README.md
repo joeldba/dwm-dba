@@ -29,3 +29,4 @@ the first three packages will need '-dev' appended to them if you're on an apt-b
 * pertag - set layouts per tag (hence the name)
 * alpha - makes the bar translucent when dwm is used alongside a compositor
 * actualfullscreen - Mod+Shift+F toggles fullscreen mode for the focused window
+* scratchpad - allows for spawning & restoring a floating terminal window, for quick typing
