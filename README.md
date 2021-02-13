@@ -18,15 +18,15 @@ the first three packages will need '-dev' appended to them if you're on an apt-b
 * adapta-gtk-theme
 
 # Patches applied:
-* fullgaps - places gaps between windows
+* fullgaps - places gaps between windows. adjustable w/ Mod + +/-
 * ~~systray - adds a systemtray~~ CURRENTLY DISABLED, X will crash if the systray is enabled! might have something to do w/ the alpha patch, don't know of a fix.
 * fancybar - shows all focused and unfocused clients on the bar
-* bar-height - allows you to adjust bar thiccness (set to 24px by default)
+* bar-height - allows you to adjust bar thiccness (set to 24px by default) 
 * center - centers new windows in floating mode
-* fibonacci & dwindle layouts
-* centeredmaster & centeredfloatingmaster layouts
-* gaplessgrid layout
+* fibonacci & dwindle layouts. bound to Mod + Y & Mod + Shift + Y respectively
+* centeredmaster & centeredfloatingmaster layouts. bound to Mod + U & Mod + Shift + U respectively 
+* gaplessgrid layout. bound to  Mod + G
 * pertag - set layouts per tag (hence the name)
 * alpha - makes the bar translucent when dwm is used alongside a compositor
-* actualfullscreen - Mod+Shift+F toggles fullscreen mode for the focused window
-* scratchpad - allows for spawning & restoring a floating terminal window, for quick typing
+* actualfullscreen. Mod+Shift+F toggles fullscreen mode for the focused window
+* scratchpad - allows for spawning & restoring a floating terminal window, for quick typing. bound to Mod + S
