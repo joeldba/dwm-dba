@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -89,6 +89,8 @@ static const char *lockcmd[] = { "slock", NULL };
 static const char *filecmd[] = { "st", "-e", "ranger", NULL };
 static const char *vimcmd[] = { "st", "-e", "vim", NULL };
 static const char *cmuscmd[] = { "st", "-e", "cmus", NULL };
+static const char *calccmd[] = { "st", "-e", "calc", NULL };
+static const char *webcmd[] = { "firefox", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -145,7 +147,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = lockcmd } },
 	{ MODKEY,			XK_r,	   spawn,	   {.v = filecmd } },
 	{ MODKEY,			XK_v,	   spawn,	   {.v = vimcmd } },
-	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = cmuscmd } },
+	{ MODKEY,			XK_n,	   spawn,	   {.v = cmuscmd } },
+	{ MODKEY,			XK_a,	   spawn,	   {.v = calccmd } },
+	{ MODKEY,			XK_w,	   spawn,	   {.v = webcmd } },
 };
 
 /* button definitions */
