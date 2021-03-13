@@ -14,10 +14,10 @@ static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = u
 static const char *fonts[]          = { "Terminus:size=8", "fontawesome:size=8" }; 
 static const char col1[]       = "#000000"; 	/* bar background */
 static const char col2[]       = "#1d1f21"; 	/* unfocused window */
-static const char col3[]       = "#AAAAAA"; 	/* bar foreground */
-static const char col4[]       = "#FFFFFF"; 	/* bar foreground highlight */
+static const char col3[]       = "#aaaaaa"; 	/* bar foreground */
+static const char col4[]       = "#ffffff"; 	/* bar foreground highlight */
 static const char col5[]       = "#000000"; 	/* bar accent color */
-static const char col6[]       = "#FFFFFF"; 	/* focused window */
+static const char col6[]       = "#3971ed"; 	/* focused window */
 static const unsigned int baralpha = 0; 	/* translucency of bar */
 static const unsigned int borderalpha = OPAQUE;		/* translucency of window borders */
 static const char *colors[][3]      = {
