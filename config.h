@@ -13,7 +13,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "Terminus:size=8", "fontawesome:size=8" }; 
 static const char col1[]       = "#000000"; 	/* bar background */
-static const char col2[]       = "#282828"; 	/* unfocused window */
+static const char col2[]       = "#1d1f21"; 	/* unfocused window */
 static const char col3[]       = "#AAAAAA"; 	/* bar foreground */
 static const char col4[]       = "#FFFFFF"; 	/* bar foreground highlight */
 static const char col5[]       = "#000000"; 	/* bar accent color */
