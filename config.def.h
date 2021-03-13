@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -9,16 +9,16 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
-static const int user_bh	    = 26;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
+static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bh	    = 24;     /* 0 = dwm calculates bar height, >=1 = user_bh calculates bar height */
 static const char *fonts[]          = { "Terminus:size=8", "fontawesome:size=8" }; 
-static const char col1[]       = "#282828"; 	/* bar background */
+static const char col1[]       = "#000000"; 	/* bar background */
 static const char col2[]       = "#282828"; 	/* unfocused window */
-static const char col3[]       = "#ebdbb2"; 	/* bar foreground */
-static const char col4[]       = "#fbf1c7"; 	/* bar foreground highlight */
-static const char col5[]       = "#3c3836"; 	/* bar accent color */
+static const char col3[]       = "#AAAAAA"; 	/* bar foreground */
+static const char col4[]       = "#FFFFFF"; 	/* bar foreground highlight */
+static const char col5[]       = "#000000"; 	/* bar accent color */
 static const char col6[]       = "#ebdbb2"; 	/* focused window */
-static const unsigned int baralpha = 0xdd; 	/* translucency of bar */
+static const unsigned int baralpha = 0; 	/* translucency of bar */
 static const unsigned int borderalpha = OPAQUE;		/* translucency of window borders */
 static const char *colors[][3]      = {
 	/*               fg    bg    border   */
@@ -80,8 +80,6 @@ static const char *dmenucmd[] = { "dmenu_run", "-i", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
-static const char *compon[] = { "picom", NULL };
-static const char *compoff[] = { "pkill", "picom", NULL };
 static const char *volup[] = { "pulsemixer", "--change-volume", "+10", NULL };
 static const char *voldown[] = { "pulsemixer", "--change-volume", "-10", NULL };
 static const char *volmute[] = { "pulsemixer", "--toggle-mute", NULL };
@@ -138,8 +136,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask, 		XK_r,      quit,           {1} }, 
-	{ MODKEY,			XK_e,	   spawn,	   {.v = compon } },
-	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,			XK_F3,	   spawn,	   {.v = volup } },
 	{ MODKEY,			XK_F2,	   spawn,	   {.v = voldown } },
 	{ MODKEY,			XK_F4,	   spawn, 	   {.v = volmute } },
