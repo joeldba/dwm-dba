@@ -86,7 +86,7 @@ static const char *volmute[] = { "pulsemixer", "--toggle-mute", NULL };
 static const char *lockcmd[] = { "slock", NULL };
 static const char *filecmd[] = { "st", "-e", "ranger", NULL };
 static const char *vimcmd[] = { "st", "-e", "vim", NULL };
-static const char *cmuscmd[] = { "st", "-e", "cmus", NULL };
+static const char *cmuscmd[] = { "st", "-e", "ncmpcpp", NULL };
 static const char *calccmd[] = { "st", "-e", "calc", NULL };
 static const char *webcmd[] = { "firefox", NULL };
 
