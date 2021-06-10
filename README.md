@@ -38,7 +38,7 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Creates a border around the bar. Again, purely for cosmetic purposes.
 
 # What are the keybindings?
-While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines all the keybindings for you. The default modkey is `Alt` as specified in `config.h`.
+While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Alt` as specified in `config.h`.
 |Action|Key combo|
 |:---:|:---:|
 |Spawn a terminal|Mod+Shift+Enter|
