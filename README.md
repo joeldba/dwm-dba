@@ -71,6 +71,7 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Monocole layout|Mod+m|
 |Floating layout|Mod+f|
 |Show/hide scratchpad|Mod+s|
+|Lock X session with slock|Mod+Shift+L|
 |Restart dwm|Mod+Shift+Q|
 
 #
