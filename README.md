@@ -19,7 +19,7 @@ To install dwm, cd into the repo you just cloned, and run `` sudo make clean ins
 # What features are there?
 I've applied quite a few patches, some functional & some purely for aesthetic purposes. Here's a list:
 * vanitygaps + layouts
-  * Adds a gap inbetween windows, the value of which can be changed in config.h. Also comes with a bunch of nifty layouts, like spiral, dwindle, bstack, centeredmaster, etc.
+  * Adds a gap inbetween windows, the value of which can be changed in config.h. (default value is 20px for all dimensions) Also comes with a bunch of nifty layouts, like spiral, dwindle, bstack, centeredmaster, etc. 
 * swallow
   * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window to reduce on-screen clutter.
 * hide-vacant-tags
