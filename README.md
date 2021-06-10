@@ -10,7 +10,7 @@ For the best possible experience with this build of dwm, you will need the follo
 * ttf-font-awesome
 * picom-tryone-git
 * slock
-* My builds of st, dmenu, and slstatus (although you could use the stock builds if you really, really want to)
+* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), and [slstatus](https://github.com/joeldba/slstatus) (although you could use the stock builds if you really, really want to)
 * My [dotfiles](https://github.com/joeldba/dotfiles)
 
 # How do I install it?
