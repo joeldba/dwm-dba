@@ -11,7 +11,7 @@ static const unsigned int gappov    = 20;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 32;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad            = 20;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=8" };
@@ -21,11 +21,11 @@ static const char col2[]       = "#282828";
 static const char col3[]       = "#bdae93";
 static const char col4[]       = "#fbf1c7";
 static const char col5[]       = "#665c54";
-static const char col_borderbar[]   = "#bdae93";
+static const char col_borderbar[]   = "#665c54";
 static const char *colors[][3]      = {
 	/*              fg     bg    border   */
-	[SchemeNorm] = { col3, col1, col5 },
-	[SchemeSel]  = { col4, col1, col3 },
+	[SchemeNorm] = { col3, col1, col1 },
+	[SchemeSel]  = { col4, col1, col5 },
 };
 
 /* tagging */
@@ -37,8 +37,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "st-256color",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
