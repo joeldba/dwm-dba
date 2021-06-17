@@ -16,12 +16,12 @@ static const int vertpad            = 20;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
 static const char dmenufont[]       = "Terminus:size=8";
-static const char col1[]       = "#2e3440";
-static const char col2[]       = "#2e3440";
-static const char col3[]       = "#8fbcbb";
-static const char col4[]       = "#eceff4";
-static const char col5[]       = "#4c566a";
-static const char col_borderbar[]   = "#4c566a";
+static const char col1[]       = "#282828";
+static const char col2[]       = "#282828";
+static const char col3[]       = "#bdae93";
+static const char col4[]       = "#fbf1c7";
+static const char col5[]       = "#665c54";
+static const char col_borderbar[]   = "#665c54";
 static const char *colors[][3]      = {
 	/*              fg     bg    border   */
 	[SchemeNorm] = { col3, col1, col1 },
