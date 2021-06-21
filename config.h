@@ -17,26 +17,26 @@ static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
 static const char dmenufont[]       = "Terminus:size=8";
 /* colors */
-static const char base[]       = "#282828";
-static const char base2[]       = "#32302f";
-static const char base3[]       = "#3c3836";
-static const char fg1[]       = "#665c54";
-static const char fg2[]       = "#bdae93";
-static const char fg3[]       = "#fbf1c7";
-static const char tan[]         = "#cc241d";
-static const char yellow[]       = "#d79921";
+static const char base[]            = "#282828";
+static const char base2[]           = "#32302f";
+static const char base3[]           = "#3c3836";
+static const char fg1[]       	    = "#665c54";
+static const char fg2[]       	    = "#bdae93";
+static const char fg3[]       	    = "#fbf1c7";
+static const char tan[]             = "#3c3836";
+static const char yellow[]          = "#d79921";
 static const char col_borderbar[]   = "#665c54";
 static const char *colors[][3]      = {
-	/*              fg     bg    border   */
-	[SchemeNorm] = { fg2, base, base },
-	[SchemeSel]  = { fg3, base, fg1 },
-	[SchemeStatus]  = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { fg3, base3,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm]  = { fg2, base2,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	/*                   fg   bg    border   */
+	[SchemeNorm]     = { fg2, base, base },
+	[SchemeSel]      = { fg3, base, fg1 },
+	[SchemeStatus]   = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { fg3, base3, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsNorm] = { fg2, base2, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm]  = { fg2, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
-	[SchemeTan] =	 { base, fg2, tan },
-	[SchemeYellow] =	 { base, yellow, tan },
+	[SchemeInfoNorm] = { fg2, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeTan]      = { base, fg2, tan },
+	[SchemeYellow]   = { base, yellow, tan },
 };
 
 /* tagging */
