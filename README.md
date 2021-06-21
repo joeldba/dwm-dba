@@ -37,6 +37,8 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Creates a border around the bar. Again, purely for cosmetic purposes.
 * colorbar
   * Enables setting colors for each individual element of the bar.
+* statuscolors
+  * A patch that interfaces with dwmblocks which enables colors for each status module.
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Alt` as specified in `config.h`.
