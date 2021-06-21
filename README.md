@@ -38,7 +38,9 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
 * colorbar
   * Enables setting colors for each individual element of the bar.
 * statuscolors
-  * A patch that interfaces with dwmblocks which enables colors for each status module.
+  * A patch that enables colors for each status module. Interfaces with dwmblocks.
+* movestack
+  * Adds the ability to move windows through the master & stack.
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Alt` as specified in `config.h`.
@@ -49,6 +51,8 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Open dmenu prompt|Mod+p|
 |Move focus right|Mod+k|
 |Move focus left|Mod+j|
+|Move window right|Mod+Shift+K|
+|Move window left|Mod+Shift+J|
 |Switch between tags|Mod+1 thru 9 (0 shows all windows on all tags)|
 |Go to last tag|Mod+Tab|
 |Move focused window between tags|Mod+Shift+1 thru 9 (0 will show focused window on all taga)|
