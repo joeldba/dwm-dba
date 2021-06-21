@@ -11,7 +11,7 @@ static const unsigned int gappov    = 20;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 32;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad            = 20;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
@@ -23,16 +23,20 @@ static const char col4[]       = "#fbf1c7";
 static const char col5[]       = "#665c54";
 static const char col6[]       = "#32302f";
 static const char col7[]       = "#3c3836";
+static const char col8[]         = "#cc241d";
+static const char col9[]       = "#d79921";
 static const char col_borderbar[]   = "#665c54";
 static const char *colors[][3]      = {
 	/*              fg     bg    border   */
 	[SchemeNorm] = { col3, col1, col2 },
 	[SchemeSel]  = { col4, col1, col5 },
-	[SchemeStatus]  = { col3, col6, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]  = { col3, col7, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { col4, col7,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]  = { col3, col6,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]  = { col4, col1,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]  = { col3, col1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeTan] =	 { col1, col3, col8 },
+	[SchemeYellow] =	 { col1, col9, col8 },
 };
 
 /* tagging */

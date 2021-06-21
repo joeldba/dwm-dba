@@ -65,7 +65,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeStatus, SchemeTagsSel, SchemeTagsNorm, SchemeInfoSel, SchemeInfoNorm, SchemeTan, SchemeYellow }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -817,6 +817,9 @@ drawbar(Monitor *m)
 	int boxs = drw->fonts->h / 9;
 	int boxw = drw->fonts->h / 6 + 2;
 	unsigned int i, occ = 0, urg = 0;
+	char *ts = stext;
+	char *tp = stext;
+  	int tsw, tpw, tx = 0;
 	Client *c;
 
 	XSetForeground(drw->dpy, drw->gc, clrborder.pixel);
@@ -824,9 +827,33 @@ drawbar(Monitor *m)
 
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon) { /* status is only drawn on selected monitor */
-		drw_setscheme(drw, scheme[SchemeNorm]);
-		sw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
-		drw_text(drw, mw - sw -2 * sp, y, sw + borderpx, th, 0, stext, 0);
+		drw_setscheme(drw, scheme[SchemeStatus]);
+		int counter=0;
+		char tmp[3];
+		while (*(tp+2) != '\0') {
+			if (*tp == 91 && *(tp+2) == 93) {
+				tmp[0]=*tp;
+				tmp[1]=*(tp+1);
+				tmp[2]=*(tp+2);
+				counter += TEXTW(tmp) - lrpad;
+			}
+			tp++;
+		}
+		sw = TEXTW(stext) - lrpad + 2 - counter; /* 2px right padding */
+		tp = ts;
+		while (*(tp+2) != '\0') {
+			if (*tp == 91 && (unsigned int)*(tp+1) < (LENGTH(colors)+49) && *(tp+2) == 93) {
+				drw_text(drw, mw - sw - 2 * sp + tx, y, sw + borderpx - tx, th, 0, ts, 0);
+				drw_setscheme(drw, scheme[(unsigned int) *(tp+1)-49]);
+				tpw = TEXTW(tp) - lrpad; 
+				tsw = TEXTW(ts) - lrpad; 
+				tx += tsw - tpw;
+				ts = tp+3;
+				tp = tp+2;
+			}
+			tp++;
+		}
+		drw_text(drw, mw - sw - 2 * sp + tx, y, sw + borderpx - tx, th, 0, ts, 0);	
 	}
 
 	for (c = m->clients; c; c = c->next) {
@@ -841,12 +868,12 @@ drawbar(Monitor *m)
 		continue;
 
 		w = TEXTW(tags[i]);
-		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
+		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeTagsSel : SchemeTagsNorm]);
 		drw_text(drw, x, y, w, th, lrpad / 2, tags[i], urg & 1 << i);
 		x += w;
 	}
 	w = blw = TEXTW(m->ltsymbol);
-	drw_setscheme(drw, scheme[SchemeNorm]);
+	drw_setscheme(drw, scheme[SchemeTagsNorm]);
 	x = drw_text(drw, x, y, w, th, lrpad / 2, m->ltsymbol, 0);
 
 	if ((w = mw - sw - x) > th) {
@@ -855,12 +882,12 @@ drawbar(Monitor *m)
 			int mid = (m->ww - (int)TEXTW(m->sel->name)) / 2 - x;
 			/* make sure name will not overlap on tags even when it is very long */
 			mid = mid >= lrpad / 2 ? mid : lrpad / 2;	
-			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
+			drw_setscheme(drw, scheme[m == selmon ? SchemeInfoSel : SchemeInfoNorm]);
 			drw_text(drw, x, y, w - 2 * sp, th, mid, m->sel->name, 0);
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, y + boxs, boxw, boxw, m->sel->isfixed, 0);
 		} else {
-			drw_setscheme(drw, scheme[SchemeNorm]);
+			drw_setscheme(drw, scheme[SchemeInfoNorm]);
 			drw_rect(drw, x, y, w - 2 * sp, th, 1, 1);
 		}
 	}
