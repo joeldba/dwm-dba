@@ -35,6 +35,8 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Again, self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
   * Creates a border around the bar. Again, purely for cosmetic purposes.
+* colorbar
+  * Enables setting colors for each individual element of the bar.
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Alt` as specified in `config.h`.
