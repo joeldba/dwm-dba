@@ -21,11 +21,18 @@ static const char col2[]       = "#282828";
 static const char col3[]       = "#bdae93";
 static const char col4[]       = "#fbf1c7";
 static const char col5[]       = "#665c54";
+static const char col6[]       = "#32302f";
+static const char col7[]       = "#3c3836";
 static const char col_borderbar[]   = "#665c54";
 static const char *colors[][3]      = {
 	/*              fg     bg    border   */
 	[SchemeNorm] = { col3, col1, col2 },
 	[SchemeSel]  = { col4, col1, col5 },
+	[SchemeStatus]  = { col3, col6, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col4, col7,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsNorm]  = { col3, col6,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]  = { col4, col1,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoNorm]  = { col3, col1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -51,20 +58,20 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
-	{ "[@]",      spiral },
-	{ "[\\]",     dwindle },
-	{ "H[]",      deck },
-	{ "TTT",      bstack },
-	{ "===",      bstackhoriz },
-	{ "HHH",      grid },
-	{ "###",      nrowgrid },
-	{ "---",      horizgrid },
-	{ ":::",      gaplessgrid },
-	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ " []= ",      tile },    /* first entry is default */
+	{ " [M] ",      monocle },
+	{ " [@] ",      spiral },
+	{ " [\\] ",     dwindle },
+	{ " H[] ",      deck },
+	{ " TTT ",      bstack },
+	{ " === ",      bstackhoriz },
+	{ " HHH ",      grid },
+	{ " ### ",      nrowgrid },
+	{ " --- ",      horizgrid },
+	{ " ::: ",      gaplessgrid },
+	{ " |M| ",      centeredmaster },
+	{ " >M> ",      centeredfloatingmaster },
+	{ " ><> ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
