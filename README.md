@@ -29,8 +29,6 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Allows you to show/hide a small, floating terminal window for quick typing or running commands.
 * restartsig
   * Adds the ability to restart dwm. Making changes is now a breeze, as you don't have to completely restart X11 after rebuilding dwm.
-* centeredwindowname
-  * Self-explanatory. Centers focused window's name on the bar.
 * barpadding
   * Again, self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
