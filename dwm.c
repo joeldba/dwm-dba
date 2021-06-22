@@ -65,7 +65,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel, SchemeRed, SchemeGreen, SchemeYellow, SchemeBlue, SchemeStatus, SchemeTagsSel, SchemeTagsNorm, SchemeInfoSel, SchemeInfoNorm }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeRed, SchemeGreen, SchemeYellow, SchemeBlue, SchemePurple, SchemeStatus, SchemeTagsSel, SchemeTagsNorm, SchemeInfoSel, SchemeInfoNorm }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -878,12 +878,8 @@ drawbar(Monitor *m)
 
 	if ((w = mw - sw - x) > th) {
 		if (m->sel) {
-	            /* fix overflow when window name is bigger than window width */
-			int mid = (m->ww - (int)TEXTW(m->sel->name)) / 2 - x;
-			/* make sure name will not overlap on tags even when it is very long */
-			mid = mid >= lrpad / 2 ? mid : lrpad / 2;	
 			drw_setscheme(drw, scheme[m == selmon ? SchemeInfoSel : SchemeInfoNorm]);
-			drw_text(drw, x, y, w - 2 * sp, th, mid, m->sel->name, 0);
+			drw_text(drw, x, y, w - 2 * sp, th, lrpad / 2, m->sel->name, 0);
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, y + boxs, boxw, boxw, m->sel->isfixed, 0);
 		} else {
