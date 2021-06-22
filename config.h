@@ -18,9 +18,8 @@ static const char *fonts[]          = { "Terminus:size=9" };
 static const char dmenufont[]       = "Terminus:size=8";
 /* colors */
 static const char base[]            = "#282828";
-static const char base2[]           = "#181818";
-static const char base3[]           = "#32302f";
-static const char base4[]           = "#3c3836";
+static const char base2[]           = "#32302f";
+static const char base3[]           = "#3c3836";
 static const char fg1[]       	    = "#504945";
 static const char fg2[]       	    = "#bdae93";
 static const char fg3[]       	    = "#fbf1c7";
@@ -32,15 +31,15 @@ static const char purple[]          = "#d3869b";
 static const char col_borderbar[]   = "#504945";
 static const char *colors[][3]      = {
 	/*                   fg   bg    border   */
-	[SchemeNorm]     = { fg2, base, base2 },
+	[SchemeNorm]     = { fg2, base, base },
 	[SchemeSel]      = { fg3, base, fg1 },
 	[SchemeRed]	 = { base, red, red },
 	[SchemeGreen]	 = { base, green, red },
 	[SchemeYellow]   = { base, yellow, red },
 	[SchemeBlue]	 = { base, blue, red },
 	[SchemePurple]	 = { base, purple, red },
-	[SchemeStatus]   = { fg2, base4, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { yellow, base3, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeStatus]   = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { yellow, base2, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { fg2, base, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { fg3, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
@@ -105,7 +104,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *lockcmd[] = { "slock", NULL };
-
+static const char *pwrscript[] = { "$HOME/.config/dwm/scripts/power.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -143,6 +142,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = lockcmd } },	
+	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -163,7 +163,6 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
