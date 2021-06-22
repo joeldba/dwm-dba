@@ -18,8 +18,9 @@ static const char *fonts[]          = { "Terminus:size=9" };
 static const char dmenufont[]       = "Terminus:size=8";
 /* colors */
 static const char base[]            = "#282828";
-static const char base2[]           = "#32302f";
-static const char base3[]           = "#3c3836";
+static const char base2[]           = "#181818";
+static const char base3[]           = "#32302f";
+static const char base4[]           = "#3c3836";
 static const char fg1[]       	    = "#504945";
 static const char fg2[]       	    = "#bdae93";
 static const char fg3[]       	    = "#fbf1c7";
@@ -31,15 +32,15 @@ static const char purple[]          = "#d3869b";
 static const char col_borderbar[]   = "#504945";
 static const char *colors[][3]      = {
 	/*                   fg   bg    border   */
-	[SchemeNorm]     = { fg2, base, base },
+	[SchemeNorm]     = { fg2, base, base2 },
 	[SchemeSel]      = { fg3, base, fg1 },
 	[SchemeRed]	 = { base, red, red },
 	[SchemeGreen]	 = { base, green, red },
 	[SchemeYellow]   = { base, yellow, red },
 	[SchemeBlue]	 = { base, blue, red },
 	[SchemePurple]	 = { base, purple, red },
-	[SchemeStatus]   = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { yellow, base2, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeStatus]   = { fg2, base4, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { yellow, base3, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { fg2, base, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { fg3, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
