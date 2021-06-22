@@ -15,9 +15,9 @@ For the best possible experience with this build of dwm, you will need the follo
 # How do I install it?
 To install dwm, run these commands:
 
-`git clone https://github.com/joeldba/dwm ~/.config/dwm`
-`cd ~/.config/dwm`
-`sudo make clean install`
+* `git clone https://github.com/joeldba/dwm ~/.config/dwm`
+* `cd ~/.config/dwm`
+* `sudo make clean install`
 
 If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx` is run.
 
