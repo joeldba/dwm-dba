@@ -13,7 +13,13 @@ For the best possible experience with this build of dwm, you will need the follo
 * My [dotfiles](https://github.com/joeldba/dotfiles)
 
 # How do I install it?
-To install dwm, `cd` into the dwm folder, and run `sudo make clean install`. If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx` is run.
+To install dwm, run these commands:
+
+`git clone https://github.com/joeldba/dwm ~/.config/dwm`
+`cd ~/.config/dwm`
+`sudo make clean install`
+
+If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx` is run.
 
 # What features are there?
 I've applied quite a few patches, some functional & some purely for aesthetic purposes. Here's a list:
