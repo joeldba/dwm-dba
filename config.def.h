@@ -11,7 +11,7 @@ static const unsigned int gappov    = 20;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 28;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 26;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad            = 20;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
@@ -27,6 +27,7 @@ static const char red[]             = "#cc241d";
 static const char green[]           = "#98971a";
 static const char yellow[]          = "#d79921";
 static const char blue[]            = "#458588";
+static const char purple[]          = "#b16286";
 static const char col_borderbar[]   = "#504945";
 static const char *colors[][3]      = {
 	/*                   fg   bg    border   */
@@ -36,6 +37,7 @@ static const char *colors[][3]      = {
 	[SchemeGreen]	 = { base, green, red },
 	[SchemeYellow]   = { base, yellow, red },
 	[SchemeBlue]	 = { fg3, blue, red },
+	[SchemePurple]	 = { fg3, purple, red },
 	[SchemeStatus]   = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { fg3, fg1, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { fg2, base3, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
