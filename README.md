@@ -11,6 +11,8 @@ For the best possible experience with this build of dwm, you will need the follo
 * slock
 * My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), and [dwmblocks](https://github.com/joeldba/dwmblocks) (although you could use the stock builds if you really, really want to)
 * My [dotfiles](https://github.com/joeldba/dotfiles)
+* mpd + mpc
+* scrot
 
 # How do I install it?
 To install dwm, run these commands:
