@@ -82,10 +82,12 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Monocole layout|Mod+m|
 |Floating layout|Mod+f|
 |Show/hide scratchpad|Mod+s|
+|Show scrot options menu|Mod+Shift+S|
+|Show mpd options menu|Mod+Shift+M|
 |Lock X session with slock|Mod+Shift+L|
 |Show power options menu|Mod+Shift+X|
 |Restart dwm|Mod+Shift+Q|
 
 # Extra tidbits
-In the binding for the power.sh script (line 145), you might need to replace $HOME with your full user path (/home/username) in order for the script to launch properly.
+For the script bindings, you might need to replace $HOME with your full user path (/home/username) in order for the scripts to launch properly.
 
