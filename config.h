@@ -69,12 +69,12 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ " tall ",      tile },    /* first entry is default */
+	{ " tile ",      tile },    /* first entry is default */
 	{ " mono ",      monocle },
 	{ " sprl ",      spiral },
 	{ " dwdl ",     dwindle },
 	{ " deck ",      deck },
-	{ " shrt ",      bstack },
+	{ " shtl ",      bstack },
 	{ " bstc ",      bstackhoriz },
 	{ " grid ",      grid },
 	{ " nrgd ",      nrowgrid },
@@ -105,6 +105,8 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *lockcmd[] = { "slock", NULL };
 static const char *pwrscript[] = { "$HOME/.config/dwm/scripts/power.sh", NULL };
+static const char *scrotscript[] = { "$HOME/.config/dwm/scripts/scrot.sh", NULL };
+static const char *musicscript[] = { "$HOME/.config/dwm/scripts/music.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -143,6 +145,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = lockcmd } },	
 	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
+	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
+	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
