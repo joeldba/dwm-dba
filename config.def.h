@@ -41,7 +41,7 @@ static const char *colors[][3]      = {
 	[SchemeStatus]   = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { fg3, fg1, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { fg2, base3, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]  = { fg2, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { fg2, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
@@ -69,20 +69,20 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ " []= ",      tile },    /* first entry is default */
-	{ " [M] ",      monocle },
-	{ " [@] ",      spiral },
-	{ " [\\] ",     dwindle },
-	{ " H[] ",      deck },
-	{ " TTT ",      bstack },
-	{ " === ",      bstackhoriz },
-	{ " HHH ",      grid },
-	{ " ### ",      nrowgrid },
-	{ " --- ",      horizgrid },
-	{ " ::: ",      gaplessgrid },
-	{ " |M| ",      centeredmaster },
-	{ " >M> ",      centeredfloatingmaster },
-	{ " ><> ",      NULL },    /* no layout function means floating behavior */
+	{ " tall ",      tile },    /* first entry is default */
+	{ " mono ",      monocle },
+	{ " sprl ",      spiral },
+	{ " dwdl ",     dwindle },
+	{ " deck ",      deck },
+	{ " shrt ",      bstack },
+	{ " bstc ",      bstackhoriz },
+	{ " grid ",      grid },
+	{ " nrgd ",      nrowgrid },
+	{ " hgrd ",      horizgrid },
+	{ " ggrd ",      gaplessgrid },
+	{ " cmst ",      centeredmaster },
+	{ " cflm ",      centeredfloatingmaster },
+	{ " fltg ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
