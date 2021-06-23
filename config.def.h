@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 20;       /* snap pixel */
 static const int swallowfloating    = 0;	/* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
@@ -11,15 +11,16 @@ static const unsigned int gappov    = 20;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 26;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 28;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad            = 20;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
 static const char dmenufont[]       = "Terminus:size=8";
 /* colors */
 static const char base[]            = "#282828";
-static const char base2[]           = "#32302f";
-static const char base3[]           = "#3c3836";
+static const char base2[]           = "#181818";
+static const char base3[]           = "#32302f";
+static const char base4[]           = "#3c3836";
 static const char fg1[]       	    = "#504945";
 static const char fg2[]       	    = "#bdae93";
 static const char fg3[]       	    = "#fbf1c7";
@@ -28,18 +29,18 @@ static const char green[]           = "#b8bb26";
 static const char yellow[]          = "#fabd2f";
 static const char blue[]            = "#83a598";
 static const char purple[]          = "#d3869b";
-static const char col_borderbar[]   = "#504945";
+static const char col_borderbar[]   = "#282828";
 static const char *colors[][3]      = {
 	/*                   fg   bg    border   */
-	[SchemeNorm]     = { fg2, base, base },
+	[SchemeNorm]     = { fg2, base, base2 },
 	[SchemeSel]      = { fg3, base, fg1 },
 	[SchemeRed]	 = { base, red, red },
 	[SchemeGreen]	 = { base, green, red },
 	[SchemeYellow]   = { base, yellow, red },
 	[SchemeBlue]	 = { base, blue, red },
 	[SchemePurple]	 = { base, purple, red },
-	[SchemeStatus]   = { fg2, base3, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { yellow, base2, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeStatus]   = { fg2, base4, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { yellow, base4, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { fg2, base, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { fg3, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
@@ -104,9 +105,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *lockcmd[] = { "slock", NULL };
-static const char *pwrscript[] = { "$HOME/.config/dwm/scripts/power.sh", NULL };
-static const char *scrotscript[] = { "$HOME/.config/dwm/scripts/scrot.sh", NULL };
-static const char *musicscript[] = { "$HOME/.config/dwm/scripts/music.sh", NULL };
+static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL };
+static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
+static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
