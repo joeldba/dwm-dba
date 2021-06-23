@@ -37,16 +37,19 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Allows you to show/hide a small, floating terminal window for quick typing or running commands.
 * restartsig
   * Adds the ability to restart dwm. Making changes is now a breeze, as you don't have to completely restart X11 after rebuilding dwm.
-* barpadding
-  * Again, self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
+* movestack
+  * Adds the ability to move windows through the master & stack.
+*  barpadding
+  * Self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
   * Creates a border around the bar. Again, purely for cosmetic purposes.
+* centeredwindowname
+  * Centers the focused window's name in the bar.
 * colorbar
   * Enables setting colors for each individual element of the bar.
 * statuscolors
   * A patch that enables colors for each status module. Interfaces with dwmblocks.
-* movestack
-  * Adds the ability to move windows through the master & stack.
+
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Alt` as specified in `config.h`.
