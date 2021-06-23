@@ -105,9 +105,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 static const char *lockcmd[] = { "slock", NULL };
-static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL };
-static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
-static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
+static const char *pwrscript[] = { "$HOME/.config/dwm/scripts/power.sh", NULL };
+static const char *scrotscript[] = { "$HOME/.config/dwm/scripts/scrot.sh", NULL };
+static const char *musicscript[] = { "$HOME/.config/dwm/scripts/music.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
