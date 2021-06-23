@@ -48,8 +48,6 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
   * Creates a border around the bar. Again, purely for cosmetic purposes.
-* centeredwindowname
-  * Centers the focused window's name in the bar.
 * colorbar
   * Enables setting colors for each individual element of the bar.
 * statuscolors
