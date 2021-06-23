@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 20;       /* snap pixel */
 static const int swallowfloating    = 0;	/* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
@@ -11,7 +11,7 @@ static const unsigned int gappov    = 20;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 28;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad            = 20;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
@@ -29,16 +29,16 @@ static const char green[]           = "#b8bb26";
 static const char yellow[]          = "#fabd2f";
 static const char blue[]            = "#83a598";
 static const char purple[]          = "#d3869b";
-static const char col_borderbar[]   = "#504945";
+static const char col_borderbar[]   = "#282828";
 static const char *colors[][3]      = {
 	/*                   fg   bg    border   */
 	[SchemeNorm]     = { fg2, base, base },
 	[SchemeSel]      = { fg2, base4, fg1 },
-	[SchemeRed]	 = { red, base4, red },
-	[SchemeGreen]	 = { green, base4, red },
-	[SchemeYellow]   = { yellow, base4, red },
-	[SchemeBlue]	 = { blue, base4, red },
-	[SchemePurple]	 = { purple, base4, red },
+	[SchemeRed]	 = { base, red, red },
+	[SchemeGreen]	 = { base, green, red },
+	[SchemeYellow]   = { base, yellow, red },
+	[SchemeBlue]	 = { base, blue, red },
+	[SchemePurple]	 = { base, purple, red },
 	[SchemeStatus]   = { fg2, base4, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { yellow, fg1, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { fg2, base4, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
