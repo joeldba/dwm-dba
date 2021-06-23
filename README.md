@@ -44,7 +44,7 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Adds the ability to restart dwm. Making changes is now a breeze, as you don't have to completely restart X11 after rebuilding dwm.
 * movestack
   * Adds the ability to move windows through the master & stack.
-*  barpadding
+* barpadding
   * Self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
   * Creates a border around the bar. Again, purely for cosmetic purposes.
