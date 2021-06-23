@@ -40,8 +40,8 @@ static const char *colors[][3]      = {
 	[SchemeBlue]	 = { base, blue, red },
 	[SchemePurple]	 = { base, purple, red },
 	[SchemeStatus]   = { fg2, base4, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { yellow, base4, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm] = { fg2, base3, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { yellow, fg1, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsNorm] = { fg2, base4, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { fg3, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
