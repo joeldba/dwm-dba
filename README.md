@@ -23,6 +23,11 @@ To install dwm, run these commands:
 
 If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx` is run.
 
+# Extra tidbits
+For the script bindings, you might need to replace $HOME with your full user path (/home/username) in order for the scripts to launch properly.
+You may also need to make the scripts executable by running:
+`chmod +x ~/.config/dwm/scripts/*.sh`
+
 # What features are there?
 I've applied quite a few patches, some functional & some purely for aesthetic purposes. Here's a list:
 * vanitygaps + layouts
@@ -92,7 +97,4 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Lock X session with slock|Mod+Shift+L|
 |Show power options menu|Mod+Shift+X|
 |Restart dwm|Mod+Shift+Q|
-
-# Extra tidbits
-For the script bindings, you might need to replace $HOME with your full user path (/home/username) in order for the scripts to launch properly.
 
