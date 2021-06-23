@@ -25,7 +25,7 @@ If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx
 
 # Extra tidbits
 For the script bindings, you might need to replace $HOME with your full user path (/home/username) in order for the scripts to launch properly.
-You may also need to make the scripts executable by running:
+You may also need to make the scripts themselves executable by running:
 `chmod +x ~/.config/dwm/scripts/*.sh`
 
 # What features are there?
