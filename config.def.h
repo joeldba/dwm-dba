@@ -32,7 +32,7 @@ static const char purple[]          = "#d3869b";
 static const char col_borderbar[]   = "#282828";
 static const char *colors[][3]      = {
 	/*                   fg   bg    border   */
-	[SchemeNorm]     = { fg2, base, base2 },
+	[SchemeNorm]     = { fg2, base, base },
 	[SchemeSel]      = { fg3, base, fg1 },
 	[SchemeRed]	 = { base, red, red },
 	[SchemeGreen]	 = { base, green, red },
