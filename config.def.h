@@ -3,7 +3,7 @@
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 20;       /* snap pixel */
-static const int swallowfloating    = 0;	/* 1 means swallow floating windows by default */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 20;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 20;       /* horiz outer gap between windows and screen edge */
@@ -17,46 +17,49 @@ static const int sidepad            = 20;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Terminus:size=9" };
 static const char dmenufont[]       = "Terminus:size=8";
 /* colors */
-static const char base[]            = "#282828";
-static const char base2[]           = "#181818";
-static const char base3[]           = "#32302f";
-static const char base4[]           = "#3c3836";
-static const char fg1[]       	    = "#504945";
-static const char fg2[]       	    = "#bdae93";
-static const char fg3[]       	    = "#fbf1c7";
-static const char red[]             = "#fb4934";
-static const char green[]           = "#b8bb26";
+static const char base[]       	    = "#282828";
+static const char base2[]      	    = "#3c3836";
+static const char base3[]           = "#504945";
+static const char base4[]           = "#665c64";
+static const char base5[]           = "#6c6f64";
+static const char fg[]       	    = "#a89984";
+static const char fg2[]             = "#bdae93";
+static const char fg3[]             = "#d5c4a1";
+static const char fg4[]             = "#ebdbb2";
+static const char fg5[]             = "#fbf1c7";
 static const char yellow[]          = "#fabd2f";
+static const char red[]             = "#fb4934";
 static const char blue[]            = "#83a598";
 static const char purple[]          = "#d3869b";
-static const char col_borderbar[]   = "#282828";
+static const char orange[]          = "#fe8019";
+static const char col_borderbar[]   = "#3c3836";
 static const char *colors[][3]      = {
-	/*                   fg   bg    border   */
-	[SchemeNorm]     = { fg2, base, base },
-	[SchemeSel]      = { fg2, base4, fg1 },
-	[SchemeRed]	 = { base, red, red },
-	[SchemeGreen]	 = { base, green, red },
-	[SchemeYellow]   = { base, yellow, red },
-	[SchemeBlue]	 = { base, blue, red },
-	[SchemePurple]	 = { base, purple, red },
-	[SchemeStatus]   = { fg2, base4, "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { yellow, fg1, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm] = { fg2, base4, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { fg3, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm] = { fg3, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	/*               fg         bg         border   */
+	[SchemeNorm] 	  = { fg,   base,      base },
+	[SchemeSel]  	  = { fg2,  base2,     base2 },
+	[SchemeRed] 	  = { red, base2, red },
+	[SchemeBlue]	  = { blue, base2, red },
+	[SchemePurple]	  = { purple, base2, red },
+	[SchemeYellow]	  = { yellow, base2, red },
+	[SchemeOrange]	  = { orange, base2, red },
+	[SchemeStatus]    = { fg2,  base2,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]   = { yellow, base3,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+        [SchemeTagsNorm]  = { fg2, base2,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+        [SchemeInfoSel]   = { fg5, base,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+        [SchemeInfoNorm]  = { fg5, base,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
-static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
+static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "st-256color",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	/* class              instance  title           tags mask  iscentered  isfloating  isterminal  noswallow  monitor */
+	{ "st-256color",      NULL,     NULL,           0, 	   1,         0,          1,           0,        -1 },
+	{ NULL,               NULL,     "Event Tester", 0,         0, 	      0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -66,23 +69,22 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
-#include "movestack.c"
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ " tile ",      tile },    /* first entry is default */
-	{ " monocle ",      monocle },
-	{ " spiral ",      spiral },
-	{ " dwindle ",     dwindle },
-	{ " deck ",      deck },
-	{ " bstack ",      bstack },
-	{ " bstackhoriz ",      bstackhoriz },
-	{ " grid ",      grid },
-	{ " nrowgrid ",      nrowgrid },
-	{ " horizgrid ",      horizgrid },
-	{ " gaplessgrid ",      gaplessgrid },
-	{ " centered ",      centeredmaster },
-	{ " centeredfloat ",      centeredfloatingmaster },
+	{ " tile ",            tile },    /* first entry is default */
+	{ " monocle ",         monocle },
+	{ " spiral ",          spiral },
+	{ " dwindle ",         dwindle },
+	{ " deck ",            deck },
+	{ " bstack ",          bstack },
+	{ " bstackhoriz ",     bstackhoriz },
+	{ " grid ",            grid },
+	{ " nrowgrid ",        nrowgrid },
+	{ " horizgrid ",       horizgrid },
+	{ " gaplessgrid ",     gaplessgrid },
+	{ " centermaster ",    centeredmaster },
+	{ " centerfloating ",  centeredfloatingmaster },
 	{ " float ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
@@ -100,14 +102,15 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
-static const char *lockcmd[] = { "slock", NULL };
 static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL };
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
+
+#include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -120,14 +123,19 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
+	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
+	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
+	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,		XK_t,	   setlayout,	   {.v = &layouts[5]} },
 	{ MODKEY,			XK_y,	   setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,		XK_y,	   setlayout,	   {.v = &layouts[3]} },
@@ -135,7 +143,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_g,	   setlayout,	   {.v = &layouts[8]} },	
 	{ MODKEY,			XK_u,	   setlayout,	   {.v = &layouts[11]} },
 	{ MODKEY|ShiftMask,		XK_u,	   setlayout,      {.v = &layouts[12]} },	
-	{ MODKEY,			XK_r,	   setlayout,	   {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -144,7 +151,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   {.v = lockcmd } },	
 	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
 	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
 	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
@@ -157,8 +163,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-/*	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} }, */
-	{ MODKEY|ShiftMask, XK_q,      quit,           {1} }, 
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {1} },
+	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {0} }, 
 };
 
 /* button definitions */
@@ -168,6 +174,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
