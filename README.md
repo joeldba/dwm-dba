@@ -44,6 +44,8 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Adds the ability to restart dwm. Making changes is now a breeze, as you don't have to completely restart X11 after rebuilding dwm.
 * movestack
   * Adds the ability to move windows through the master & stack.
+* cfacts
+  * Allows you to grow/shrink windows horizontally
 * barpadding
   * Self-explanatory. Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
@@ -71,6 +73,8 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Show another tag|Mod+Ctrl+1 thru 9|
 |Increase master size|Mod+l|
 |Decrease master size|Mod+h|
+|Expand window|Mod+Shift+H|
+|Shrink window|Mod+Shift+L|
 |Make slave master|Mod+Enter|
 |Increase amt of masters|Mod+i|
 |Decrease amt of masters|Mod+d|
@@ -95,4 +99,5 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Lock X session with slock|Mod+Shift+L|
 |Show power options menu|Mod+Shift+X|
 |Restart dwm|Mod+Shift+Q|
+|Quit dwm|Mod+Shift+Ctrl+Q|
 
