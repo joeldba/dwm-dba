@@ -84,7 +84,7 @@ static const Layout layouts[] = {
 	{ " horizgrid ",       horizgrid },
 	{ " gaplessgrid ",     gaplessgrid },
 	{ " centermaster ",    centeredmaster },
-	{ " centerfloating ",  centeredfloatingmaster },
+	{ " centerfloat ",  centeredfloatingmaster },
 	{ " float ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
@@ -109,6 +109,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24"
 static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL };
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
+static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -154,6 +155,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
 	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
 	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
+	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = favscript } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
