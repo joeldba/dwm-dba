@@ -110,7 +110,7 @@ static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NUL
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
 static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL };
-static const char *helpcmd[] = { "st", "-e", "less", "/home/rwt/.config/dwm/README.md", NULL };
+static const char *helpcmd[] = { "st", "-ig", "128x44", "vim", "-M", "/home/rwt/.config/dwm/README.md", NULL };
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
