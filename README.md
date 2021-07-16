@@ -1,3 +1,6 @@
+# About dwm
+dwm is an extremely fast, small, and dynamic window manager for X.
+
 # Prerequisites:
 To build dwm, you will need:
 * libx11
