@@ -96,6 +96,7 @@ While this information can be gathered from `config.h` I've gone the extra mile 
 |Show/hide scratchpad|Mod+s|
 |Show scrot options menu|Mod+Shift+S|
 |Show mpd options menu|Mod+Shift+M|
+|Show README file|Mod+Shift+R|
 |Lock X session with slock|Mod+Shift+L|
 |Show power options menu|Mod+Shift+X|
 |Restart dwm|Mod+Shift+Q|
