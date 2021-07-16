@@ -110,7 +110,7 @@ static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NUL
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
 static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL };
-
+static const char *helpcmd[] = { "st", "-e", "less", "/home/rwt/.config/dwm/README.md", NULL };
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -156,6 +156,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
 	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
 	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = favscript } },
+	{ MODKEY|ShiftMask,		XK_r,      spawn,	   {.v = helpcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
